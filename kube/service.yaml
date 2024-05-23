@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acmeats-service
+spec:
+  selector:
+    app: acmeats
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: ClusterIP

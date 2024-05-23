@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acmeats-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: acmeats
+  template:
+    metadata:
+      labels:
+        app: acmeats
+    spec:
+      containers:
+      - name: acmeats
+        image: nidan12/acmeats:first
+        ports:
+        - containerPort: 3000
