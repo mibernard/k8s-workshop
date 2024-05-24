@@ -13,7 +13,7 @@ spec:
         app: acmeats
     spec:
       containers:
-      - name: acmeats
-        image: nidan12/acmeats:first
-        ports:
-        - containerPort: 3000
+        - name: acmeats
+          image: nidan12/acmeats:latest
+          ports:
+            - containerPort: 3000
